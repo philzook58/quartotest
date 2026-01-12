@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "quartotest",
+    "title": "Automated Reasoning in Python",
     "section": "",
     "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
     "crumbs": [
@@ -20,13 +20,23 @@
     ]
   },
   {
+    "objectID": "terms.html",
+    "href": "terms.html",
+    "title": "2  Terms",
+    "section": "",
+    "text": "2.1 Subterm\nWhen we do mathematics by hand on paper and pencil or on a chalkboard, it is not entirely clear how to model what is being written at it’s most literal level.\nThe human mind can quickly determine the intent behind a scrawl of \\(sin^2(x) + cos^2(x)\\) or that a drawing of a circle represents the mathematical abstraction the mathemtically perfect circle, despite the imperfections of rendering, the finite width of it;s edge on the board.\nIn order to be precise enough about our topic to make it mechanical, we must try to invent of model of mathematical symbolism that is possible to translate to a machine.\nUltimately, the choice is somewhat arbitrary. We could perhaps store our mathematical expressions as PNG, editting them with photoshop. This choice would require excessive memory and computation and not be particularly easy to work with (except perhaps by neural net, so maybe there is something there).\nAnother choice might be strings or byte sequences. This is a lowest common denomiator of data in machines and communication. These too have their issues.\nIt is very typical that strings must be parsed into a more structural form.\nTerms are trees\nNamedTuple is a python standard library function to make record/struct datatypes.\nIt is convenient to make helper functions to make construction look more natural.\nConstants are merely applications to zero arguments.\ndef is_subterm(t: App, s: App) -&gt; bool:\n    if t == s:\n        return True\n    else:\n        return any(is_subterm(arg, s) for arg in t.args)\n\n\nassert is_subterm(add(x, y), x)\nassert not is_subterm(add(x, y), z)\nassert not is_subterm(x, add(x, y))",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Terms</span>"
+    ]
+  },
+  {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "2  Summary",
+    "title": "3  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
     ]
   },
   {
