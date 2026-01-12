@@ -2,12 +2,13 @@ project:
   type: book
 
 book:
-  title: "quartotest"
-  author: "Norah Jones"
+  title: "Automated Reasoning in Python"
+  author: "Philip Zucker"
   date: "1/11/2026"
   chapters:
     - index.qmd
     - intro.qmd
+    - terms.qmd
     - summary.qmd
     - references.qmd
 
